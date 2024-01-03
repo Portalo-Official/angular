@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-counter',
     template: `
-            <h1>Hola</h1>
-            <button (click)="incrementar()">1</button>
-            <button (click)="reset()">Reset</button>
-            <button (click)="decrementar()">-1</button>
-            <h2>{{contador}}</h2>
+            <h1>Contador</h1>
+            <button class="btn btn-outline-secondary" (click)="incrementar()">1</button>
+            <button class="btn btn-outline-secondary" (click)="reset()">Reset</button>
+            <button class="btn btn-outline-secondary" (click)="decrementar()">-1</button>
+            <h2 class="text-secondary">{{contador}}</h2>
             `
 })
 
@@ -19,6 +19,7 @@ export class CounterComponent {
     }
     decrementar(): void{
         this.contador --;
+
     }
     reset():void{
         this.contador = 0;
